@@ -1,0 +1,121 @@
+---
+title: "Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{disPack}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(disPack)
+```
+
+## Simulated examples
+```{r}
+x = matrix(c(1, 2, 4, 3, 0, -4, 5, 0.1, 7), 3, 3)
+
+a = rnorm(10)
+b = rnorm(10)
+```
+
+
+### Euclidean distance
+Evaluate Euclidean distance on matrix with 3 points with 3 dimensions.
+```{r}
+euclidean(x)
+```
+Add weight component and return as dist object. 
+```{r}
+euclidean(x, w = 0.5, output = "dist")
+```
+Evaluate Euclidean distance between two points with dimension 10 with weight 0.5
+```{r}
+euclidean(a, b, w = 0.5)
+```
+
+### Manhattan distance
+
+Evaluate Manhattan distance on matrix with 3 points with 3 dimensions.
+```{r}
+manhattan(x)
+```
+Evaluate Manhattan distance between two points with dimension 10 with return of a dist object
+```{r}
+euclidean(a, b, output = "dist")
+```
+### Minkowski distance 
+Evaluate Minkowski distance with one more parameters, p(required) and w (optional)
+```{r}
+minkowski(x, p = 3)
+```
+```{r}
+minkowski(a, b, p = 0.5, w = 2)
+```
+
+### Other examples
+Cosine, correlation, Chebyshev, and Chi-square distance are used in the same way as Manhattan. 
+Here are some examples:
+
+* Cosine distance
+```{r}
+cos_dis(x)
+```
+* Correlation distance
+```{r}
+corr_dis(x)
+```
+* Chebyshev distance
+```{r}
+chebyshev(a, b)
+```
+* Chi-square distance
+```{r}
+chiSq_dis(x)
+```
+
+
+## Real world case
+Distance data is from: https://people.sc.fsu.edu/~jburkardt/datasets/cities/wg22_xy.txt
+```{r}
+data <- read.table("C:/Users/Public/Documents/disPack/dataset/wg22_xy.txt", quote="\"")
+data <- as.matrix(data)
+dimnames(data) <- NULL
+name_list <- c("Aachen", "Augsburg", "Braunschweig", "Bremen", "Essen", "Freiburg", "Hamburg", "Hof", "Karlsruhe", "Kassel", "Kiel", "Koeln", "Mannheim", "Muenchen", "Nuernberg", "Passau", "Regensburg", "Saarbruecken", "Wuerzburg", "Bielefeld", "Luebeck","Muenster")
+```
+
+* Euclidean distance
+```{r, results='hide'}
+euclidean_dist = euclidean(data)
+```
+
+```{r}
+row.names(euclidean_dist) <- name_list
+colnames(euclidean_dist) <- name_list
+```
+
+```{r, fig.dim=c(6, 6)}
+heatmap(euclidean_dist, Rowv = NA, Colv = NA, scale = "none")
+```
+
+* Cosine distance 
+```{r, results='hide'}
+cosine_dist = cos_dis(data)
+```
+
+```{r}
+row.names(cosine_dist) <- name_list
+colnames(cosine_dist) <- name_list
+```
+
+
+```{r, fig.dim=c(6, 6)}
+heatmap(cosine_dist, Rowv = NA, Colv = NA, scale = "none")
+```

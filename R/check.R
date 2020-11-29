@@ -1,3 +1,4 @@
+#Function to check validation of inputs
 input_format <- function(x, y){
   if (any(is.na(x) | !is.numeric(x))){
     stop("x should be numeric")
@@ -27,6 +28,7 @@ input_format <- function(x, y){
   return(m)
 }
 
+#Function to check the option of output
 output_format <- function(dis, output){
   if (output == "matrix"){
     return(dis)

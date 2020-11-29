@@ -8,7 +8,7 @@
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Manhattan distance matrix or object, \eqn sum(abs(x - y)) between points
+#' @return Manhattan distance matrix or object, \eqn{\sum{|x - y|}} between points
 #'
 #' @examples
 #' manhattan(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")

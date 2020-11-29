@@ -10,7 +10,7 @@
 #' @param w Numeric value greater than 0, account for weight. Default is 1.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Minkowski distance matrix or object, \eqn sum(abs(x - y)^p * w) ^ (1/p) between points
+#' @return Minkowski distance matrix or object, \eqn{\sum{|x - y|^{p} * w} ^ {1/p}} between points
 #'
 #' @examples
 #' minkowski(x = matrix(c(1, 2, 3, 4), 2, 2), p = 2, w = 0.5, output = "dist")

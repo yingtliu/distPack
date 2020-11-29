@@ -1,10 +1,10 @@
 input_format <- function(x, y){
-  if (any(is.na(x) || !is.numeric(x))){
+  if (any(is.na(x) | !is.numeric(x))){
     stop("x should be numeric")
   }
 
   if(missing(y)){
-    if(!is.null(dim(x)[1]) && dim(x)[1] > 1){
+    if(!is.null(dim(x)[1]) && dim(x)[1] >= 2){
       m = x
     }
     else{
@@ -12,7 +12,7 @@ input_format <- function(x, y){
     }
   }
   else{
-    if (any(is.na(y) || !is.numeric(y))){
+    if (any(is.na(y) | !is.numeric(y))){
       stop("y should be numeric")
     }
     else{

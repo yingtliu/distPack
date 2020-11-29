@@ -8,7 +8,7 @@
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Cosine distance matrix or object, \eqn 1 - dot(x, y) / (norm(x) * norm(y)) between points
+#' @return Cosine distance matrix or object, \eqn{1 - \frac{x \cdot y}{\norm{x} * \norm{y}}} between points
 #'
 #' @examples
 #' cos_dis(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")

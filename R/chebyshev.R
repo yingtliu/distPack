@@ -8,7 +8,7 @@
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Chebyshev distance matrix or object, \eqn max(abs(x - y)) between points
+#' @return Chebyshev distance matrix or object, max(abs(x - y)) between points
 #'
 #' @examples
 #' chebyshev(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")

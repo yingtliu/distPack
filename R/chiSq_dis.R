@@ -8,7 +8,7 @@
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Chi-square distance matrix or object, \eqn sum((x - y)^2 / (x + y)) between points
+#' @return Chi-square distance matrix or object, \eqn{\sum{\frac{(x - y)^2}{(x + y)}}} between points
 #'
 #' @examples
 #' chiSq_dis(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")

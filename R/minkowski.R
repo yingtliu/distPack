@@ -30,8 +30,8 @@ minkowski <- function(x, y, p, w = 1, output = "matrix"){
     stop("p should be numeric and non-zero")
   }
 
-  if (is.na(w) || !is.numeric(w)){
-    stop("w should be numeric")
+  if (is.na(w) || !is.numeric(w) || w < 0){
+    stop("w should be numeric and positive")
   }
 
   m = input_format(x, y)

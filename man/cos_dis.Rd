@@ -15,7 +15,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Cosine distance matrix or object, \eqn{1 - \frac{x \cdot y}{\norm{x} * \norm{y}}} between points
+Cosine distance matrix or object, \eqn{1 - \frac{x \cdot y}{\|x\|\|y\|}} between points
 }
 \description{
 Computes the Cosine distance between n points in m dimensions

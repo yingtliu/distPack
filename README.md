@@ -6,4 +6,21 @@
 
 A package bundles functions to evaluate distance matrices by different methods. 
 
-##Methods included
+## Methods included
+* Euclidean:
+
+* Manhattan:
+
+* Minkowski:
+
+* Chebyshev:
+
+* Cosine:
+
+* Correlation:
+
+* Chi-square:
+
+## Accuracy
+
+## Efficiency

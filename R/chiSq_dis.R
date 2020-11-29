@@ -24,7 +24,7 @@ chiSq_dis <- function(x, y, output = "matrix"){
   n = nrow(m)
   dis = matrix(0, nrow = n, ncol = n)
   for(i in 1:n){
-    dis[,i] = colSums((m[i,] - t(m))^2 / (m[1,] + t(m)))
+    dis[,i] = colSums((m[i,] - t(m))^2 / (m[i,] + t(m)))
   }
   dis[is.na(dis)] = 0
   return(output_format(dis, output))

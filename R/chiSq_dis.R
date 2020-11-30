@@ -8,7 +8,7 @@
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Chi-square distance matrix or object, \eqn{\sum{\frac{(x - y)^2}{(x + y)}}} between points
+#' @return Chi-square distance matrix or object calculated by sum((x - y)^2 /(x + y)) between points
 #'
 #' @examples
 #' chiSq_dis(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")
@@ -26,6 +26,6 @@ chiSq_dis <- function(x, y, output = "matrix"){
   for(i in 1:n){
     dis[,i] = colSums((m[i,] - t(m))^2 / (m[i,] + t(m)))
   }
-  dis[is.na(dis)] = 0
+  dis[is.na(dis)] = 0 #avoid NaN output
   return(output_format(dis, output))
 }

@@ -9,7 +9,7 @@
 #' @param w Numeric value greater than 0, account for weight. Default is 1.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
-#' @return Euclidean distance matrix or object, \eqn{\sqrt{\sum{(x - y) ^ {2}}}} between points
+#' @return Euclidean distance matrix or object calculated by sqrt(sum((x - y) ^ 2)) between points
 #'
 #' @examples
 #' euclidean(x = matrix(c(1, 2, 3, 4), 2, 2), output = "dist")

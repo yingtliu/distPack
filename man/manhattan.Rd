@@ -15,7 +15,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Manhattan distance matrix or object, \eqn{\sum{|x - y|}} between points
+Manhattan distance matrix or object calculated by sum(|x - y|) between points
 }
 \description{
 Computes the Manhattan distance between n points in m dimensions

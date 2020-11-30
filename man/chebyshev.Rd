@@ -15,7 +15,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Chebyshev distance matrix or object, max(abs(x - y)) between points
+Chebyshev distance matrix or object calculated by max(abs(x - y)) between points
 }
 \description{
 Computes the Chebyshev distance between n points in m dimensions

@@ -17,7 +17,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Euclidean distance matrix or object, \eqn{\sqrt{\sum{(x - y) ^ {2}}}} between points
+Euclidean distance matrix or object calculated by sqrt(sum((x - y) ^ 2)) between points
 }
 \description{
 Computes the Euclidean distance between n points in m dimensions

@@ -15,7 +15,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Chi-square distance matrix or object, \eqn{\sum{\frac{(x - y)^2}{(x + y)}}} between points
+Chi-square distance matrix or object calculated by sum((x - y)^2 /(x + y)) between points
 }
 \description{
 Computes the Chi-square distance between n points in m dimensions

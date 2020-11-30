@@ -19,7 +19,7 @@ please specify all other parameters to avoid confusion.}
 \item{output}{Format of output, either matrix or dist object. Default is matrix.}
 }
 \value{
-Minkowski distance matrix or object, \eqn{\sum{|x - y|^{p} * w} ^ {1/p}} between points
+Minkowski distance matrix or object calculated by sum(|x - y|^p * w) ^ (1/p) between points
 }
 \description{
 Computes the Minkowski distance between n points in m dimensions

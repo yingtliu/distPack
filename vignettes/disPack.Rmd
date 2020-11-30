@@ -85,7 +85,7 @@ chiSq_dis(x)
 ## Real world case
 Distance data is from: https://people.sc.fsu.edu/~jburkardt/datasets/cities/wg22_xy.txt
 ```{r}
-data <- read.table("C:/Users/Public/Documents/disPack/dataset/wg22_xy.txt", quote="\"")
+data <- read.table("../dataset/wg22_xy.txt", quote="\"")
 data <- as.matrix(data)
 dimnames(data) <- NULL
 name_list <- c("Aachen", "Augsburg", "Braunschweig", "Bremen", "Essen", "Freiburg", "Hamburg", "Hof", "Karlsruhe", "Kassel", "Kiel", "Koeln", "Mannheim", "Muenchen", "Nuernberg", "Passau", "Regensburg", "Saarbruecken", "Wuerzburg", "Bielefeld", "Luebeck","Muenster")

@@ -4,7 +4,7 @@
 #' ,or two points with same dimensions.
 #'
 #' @param x Numeric vector, or a matrix with size n x m.
-#' @param y (optional)Numeric vector; must be the same length as x. If no input of y,
+#' @param y Optional input. Numeric vector; must be the same length as x. If no input of y,
 #'          please specify all other parameters to avoid confusion.
 #' @param w Numeric value greater than 0, account for weight. Default is 1.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
@@ -20,6 +20,8 @@
 #'
 
 euclidean <- function(x, y, w = 1, output = "matrix"){
+  # use minkowski function to calculate
   dis = minkowski(x, y, p = 2, w, output = "matrix")
+
   return(output_format(dis, output))
 }

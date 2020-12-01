@@ -4,7 +4,7 @@
 #' ,or two points with same dimensions.
 #'
 #' @param x Numeric vector, or a matrix with size n x m.
-#' @param y (optional)Numeric vector; must be the same length as x. If no input of y,
+#' @param y Optional input. Numeric vector; must be the same length as x. If no input of y,
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
@@ -20,8 +20,11 @@
 
 
 chiSq_dis <- function(x, y, output = "matrix"){
+
+  # standardize input
   m = input_format(x, y)
   n = nrow(m)
+  # create empty matrix
   dis = matrix(0, nrow = n, ncol = n)
   for(i in 1:n){
     dis[,i] = colSums((m[i,] - t(m))^2 / (m[i,] + t(m)))

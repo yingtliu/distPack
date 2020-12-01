@@ -1,10 +1,10 @@
-#' Cosine distance matrice between points
+#' Cosine distance matrix between points
 #'
 #' Computes the Cosine distance between n points in m dimensions
 #' ,or two points with same dimensions.
 #'
 #' @param x Numeric vector, or a matrix with size n x m.
-#' @param y (optional)Numeric vector; must be the same length as x. If no input of y,
+#' @param y Optional input. Numeric vector; must be the same length as x. If no input of y,
 #'          please specify all other parameters to avoid confusion.
 #' @param output Format of output, either matrix or dist object. Default is matrix.
 #'
@@ -20,8 +20,9 @@
 
 cos_dis <- function (x, y, output = "matrix"){
 
+  # standardize input
   m = input_format(x, y)
-  dis = 1 - m%*%t(m)/(sqrt(rowSums(m^2) %*% t(rowSums(m^2))))
+  dis = 1 - m %*% t(m)/(sqrt(rowSums(m ^ 2) %*% t(rowSums(m ^ 2))))
 
   return(output_format(dis, output))
 }

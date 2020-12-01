@@ -26,7 +26,7 @@ Since not all functions are available in R packages, I used a julia package call
 
 ### Efficiency
 
-The functions are optimized by vectorization and minimize use of loops. The functions are tested with matrix with 10000 elements. 
+The functions are optimized by vectorization and minimize use of loops. The functions are tested with matrix in size 100 x 100 with 10000 elements. 
 The elapsed time consumed are:
 
 * euclidean: 0.08s
